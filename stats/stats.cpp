@@ -10,6 +10,7 @@
 #include <vector>
 #include <iostream>
 
+//constructor
 Stats::Stats(std::vector<PCB> &finished_vector){
 	vec = &finished_vector;
 
@@ -57,6 +58,7 @@ float Stats::get_av_wait_time(){
 	return av_wait_time;
 }
 
+//does the work (only needs to run once)
 void Stats::calcStats(){
 	av_wait_time = 0.0;
 	av_turnaround_time = 0.0;

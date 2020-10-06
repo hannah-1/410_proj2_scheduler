@@ -15,8 +15,7 @@ bool  Scheduler_RR::time_to_switch_processes(int tick_count, PCB &p){
 	sort();
 	return (p.remaining_cpu_time <= 0 || (p.required_cpu_time-p.remaining_cpu_time)%time_slice==0);
 }
-
-//FIFO - not preemptive - no sorting needed
+//RR - preemptive - no sorting of ready_q needed.
 void Scheduler_RR::sort(){
 	preemptive = true;
 }

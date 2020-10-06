@@ -17,6 +17,7 @@ bool  Scheduler_SRTF::time_to_switch_processes(int tick_count, PCB &p){
 	return Scheduler::time_to_switch_processes(tick_count, p);
 }
 
+//helper sorting function for scheduler_SRTF
 bool greater_than_sort(PCB first, PCB second){
 	return (first.remaining_cpu_time < second.remaining_cpu_time);
 }
