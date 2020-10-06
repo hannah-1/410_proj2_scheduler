@@ -37,8 +37,6 @@ bool Scheduler::time_to_switch_processes(int tick_count, PCB &p){
 	return false;
 }
 
-// sort  ready_q based on the scheduler algorithm used whenever add(PCB p) is called
-void Scheduler::sort()=0;		//pure virtual function
 
 
 
